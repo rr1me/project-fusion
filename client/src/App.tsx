@@ -1,12 +1,12 @@
 import React from 'react';
-import "./css/index.css";
+import AppRouter from './router/AppRouter';
 
-function App() {
-    return (
-        <>
-
-        </>
-    );
-}
+const App = () => {
+  return (
+    <>
+      <AppRouter />
+    </>
+  );
+};
 
 export default App;
