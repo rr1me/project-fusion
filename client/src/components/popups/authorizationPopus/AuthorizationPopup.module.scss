@@ -1,0 +1,92 @@
+@mixin decoreElements($boolean) {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 33px;
+    height: 33px;
+    border: 5px solid var(--modal-auth-decore);
+  }
+  &:before {
+    @if $boolean {
+      top: 0;
+      left: 0;
+      border-right: none;
+      border-bottom: none;
+    } @else {
+      top: 0;
+      right: 0;
+      border-left: none;
+      border-bottom: none;
+    }
+
+  }
+  &:after {
+    @if $boolean {
+      bottom: 0;
+      right: 0;
+      border-left: none;
+      border-top: none;
+    } @else {
+      bottom: 0;
+      left: 0;
+      border-right: none;
+      border-top: none;
+    }
+  }
+}
+
+.authMainPopup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--popup-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .authWrapper {
+    outline: 1px solid var(--modal-auth-outline);
+    background: var(--modal-auth-fill);
+    max-width: 750px;
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 25px;
+      top: 11px;
+      cursor: pointer;
+    }
+
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 500px;
+      height: 100%;
+      .inputsWrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+    }
+
+
+
+    @include decoreElements(true);
+
+    .decore {
+      @include decoreElements(false);
+    }
+  }
+}

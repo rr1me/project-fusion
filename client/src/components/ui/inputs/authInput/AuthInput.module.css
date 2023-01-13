@@ -1,0 +1,18 @@
+.input {
+  max-width: 465px;
+  width: 100%;
+  text-align: center;
+  padding: 7px;
+  color: var(--auth-input-placeholder);
+  border-bottom: 3px solid var(--auth-input-border);
+}
+.input::placeholder {
+  color: var(--auth-input-placeholder);
+  font-size: 24px;
+  line-height: 28.8px;
+}
+.input:focus::placeholder {
+  color: transparent;
+}
+
+/*# sourceMappingURL=AuthInput.module.css.map */

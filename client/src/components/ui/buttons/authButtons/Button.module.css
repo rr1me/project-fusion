@@ -1,0 +1,12 @@
+.button {
+  clip-path: polygon(90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%, 0 0);
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  max-width: 230px;
+  width: 100%;
+  padding: 7px 15px;
+  color: var(--auth-input-placeholder);
+}
+
+/*# sourceMappingURL=Button.module.css.map */

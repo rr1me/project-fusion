@@ -6,7 +6,6 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.div}>
-
       </div>
     </header>
   );

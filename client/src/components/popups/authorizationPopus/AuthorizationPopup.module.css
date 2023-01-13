@@ -1,0 +1,82 @@
+.authMainPopup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--popup-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.authMainPopup .authWrapper {
+  outline: 1px solid var(--modal-auth-outline);
+  background: var(--modal-auth-fill);
+  max-width: 750px;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+}
+.authMainPopup .authWrapper svg {
+  position: absolute;
+  right: 25px;
+  top: 11px;
+  cursor: pointer;
+}
+.authMainPopup .authWrapper form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+  height: 100%;
+}
+.authMainPopup .authWrapper form .inputsWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.authMainPopup .authWrapper:before, .authMainPopup .authWrapper:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 33px;
+  height: 33px;
+  border: 5px solid var(--modal-auth-decore);
+}
+.authMainPopup .authWrapper:before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.authMainPopup .authWrapper:after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+.authMainPopup .authWrapper .decore:before, .authMainPopup .authWrapper .decore:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 33px;
+  height: 33px;
+  border: 5px solid var(--modal-auth-decore);
+}
+.authMainPopup .authWrapper .decore:before {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.authMainPopup .authWrapper .decore:after {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+/*# sourceMappingURL=AuthorizationPopup.module.css.map */
