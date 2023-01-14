@@ -22,7 +22,4 @@
 
 .active {
   border-bottom: 3px solid var(--auth-input-border-error);
-  &::placeholder {
-    color: var(--auth-input-border-error);
-  }
 }

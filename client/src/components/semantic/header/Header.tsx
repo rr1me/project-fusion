@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import s from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 const Header: FC = () => {
   return (
@@ -14,17 +15,23 @@ const Header: FC = () => {
           </div>
           <nav className={s.nav}>
             <div className={s.nav_item}>
-              Projects
+              <Link to={'/projects'}>
+                Projects
+              </Link>
             </div>
             <div className={s.nav_item}>
-              Teams
+              <Link to={'/teams'}>
+                Teams
+              </Link>
             </div>
             <div className={s.nav_item}>
-              About us
+              <Link to={'/about-us'}>
+                About us
+              </Link>
             </div>
           </nav>
           <div className={s.user_photo}>
-            <img src="" alt="ava" />
+            <img src='' alt='ava' />
           </div>
         </div>
       </div>

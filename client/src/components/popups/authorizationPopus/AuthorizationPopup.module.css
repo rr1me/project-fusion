@@ -13,6 +13,7 @@
   z-index: -1;
   transition: 0.3s;
   cursor: pointer;
+  backdrop-filter: blur(10px);
 }
 .authMainPopup .authWrapper {
   outline: 1px solid var(--modal-auth-outline);

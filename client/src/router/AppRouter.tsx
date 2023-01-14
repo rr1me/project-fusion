@@ -4,12 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const AppRouter: FC = () => {
   return (
-    <BrowserRouter>
       <Routes>
-        <Route path={'/'} element={'SOSI'}/>
+        <Route path={'/'} element={'main'}/>
+        <Route path={'/projects'} element={'projects'}/>
+        <Route path={'/teams'} element={'teams'}/>
+        <Route path={'/about-us'} element={'about-us'}/>
         <Route path={'*'} element={'404 NOT FOUND'}/>
       </Routes>
-    </BrowserRouter>
   );
 };
 

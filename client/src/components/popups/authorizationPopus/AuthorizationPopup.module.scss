@@ -52,7 +52,7 @@
   z-index: -1;
   transition: .3s;
   cursor: pointer;
-
+  backdrop-filter: blur(10px);
 
   .authWrapper {
     outline: 1px solid var(--modal-auth-outline);

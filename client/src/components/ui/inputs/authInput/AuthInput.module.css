@@ -19,8 +19,5 @@
 .active {
   border-bottom: 3px solid var(--auth-input-border-error);
 }
-.active::placeholder {
-  color: var(--auth-input-border-error);
-}
 
 /*# sourceMappingURL=AuthInput.module.css.map */

@@ -21,6 +21,8 @@ import ProjectCard from './components/ui/projectCard/ProjectCard';
 import { useDispatch } from 'react-redux';
 import { setUserData } from './redux/slices/authSlice';
 import UserCard from './components/ui/userCard/UserCard';
+import Header from './components/semantic/header/Header';
+import ProjectCard from './components/ui/projectCard/ProjectCard';
 
 
 
@@ -33,6 +35,7 @@ const App = () => {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* <ProjectCard/> */}
       {/* <UserCard/> */}
 <<<<<<< HEAD
@@ -42,8 +45,12 @@ const App = () => {
       <AuthorizationPopup/>
 >>>>>>> fe970c4 (log btn fix)
 =======
+=======
+      <Header/>
+>>>>>>> 132cc5d (popup)
       <AuthorizationPopup />
       <UserCard/>
+      <ProjectCard/>
       <button onClick={onClickAuth}>421412421</button>
 >>>>>>> c939c70 (update-auth-popup)
 =======
