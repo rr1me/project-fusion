@@ -1,14 +1,17 @@
 import React, { FC } from 'react';
 import s from './Button.module.scss';
 
-const Button: FC = () => {
-  return (
-<div>
-    <div className={s.buttonBorder}>
-      <button className={s.button}>Login</button>
-    </div>
-</div>
-  )
+interface props {
+  type: 'button' | 'submit' | 'reset' | undefined;
+  children: string;
 }
+
+const Button: FC<props> = ({ type, children }) => {
+  return (
+      <div className={s.buttonBorder}>
+        <button className={s.button} type={type}>{children}</button>
+      </div>
+  );
+};
 
 export default Button;

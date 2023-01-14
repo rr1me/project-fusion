@@ -1,9 +1,21 @@
-.button {
-  clip-path: polygon(95% 0, 100% 40%, 100% 100%, 5% 100%, 0 70%, 0 0);
+.buttonBorder {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 25px;
   right: 25px;
   max-width: 230px;
+  height: 33px;
+  width: 100%;
+  clip-path: polygon(95% 0, 100% 40%, 100% 100%, 5% 100%, 0 70%, 0 0);
+  background-color: #42f4ff;
+}
+
+.button {
+  clip-path: polygon(95% 0, 100% 40%, 100% 100%, 5% 100%, 0 70%, 0 0);
+  max-width: 227px;
+  height: 30px;
   width: 100%;
   padding: 7px 15px;
   color: var(--auth-input-placeholder);

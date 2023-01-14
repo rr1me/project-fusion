@@ -47,6 +47,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: .3s;
+  cursor: pointer;
+
 
   .authWrapper {
     outline: 1px solid var(--modal-auth-outline);
@@ -55,6 +61,10 @@
     width: 100%;
     min-height: 500px;
     position: relative;
+    transition: .3s;
+    scale: 0;
+
+    cursor: default;
 
     svg {
       position: absolute;
@@ -71,6 +81,8 @@
       flex-direction: column;
       min-height: 500px;
       height: 100%;
+
+
       .inputsWrapper {
         width: 100%;
         display: flex;
@@ -78,9 +90,11 @@
         flex-direction: column;
         gap: 50px;
       }
-
     }
 
+    .changeType {
+      margin-top: 25px;
+    }
 
 
     @include decoreElements(true);
@@ -88,5 +102,15 @@
     .decore {
       @include decoreElements(false);
     }
+  }
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+
+  .authWrapper {
+    scale: 1;
   }
 }

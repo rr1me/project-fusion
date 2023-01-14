@@ -8,6 +8,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .authMainPopup .authWrapper {
   outline: 1px solid var(--modal-auth-outline);
@@ -16,6 +21,9 @@
   width: 100%;
   min-height: 500px;
   position: relative;
+  transition: 0.3s;
+  scale: 0;
+  cursor: default;
 }
 .authMainPopup .authWrapper svg {
   position: absolute;
@@ -37,6 +45,9 @@
   align-items: center;
   flex-direction: column;
   gap: 50px;
+}
+.authMainPopup .authWrapper .changeType {
+  margin-top: 25px;
 }
 .authMainPopup .authWrapper:before, .authMainPopup .authWrapper:after {
   content: "";
@@ -77,6 +88,15 @@
   left: 0;
   border-right: none;
   border-top: none;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+.active .authWrapper {
+  scale: 1;
 }
 
 /*# sourceMappingURL=AuthorizationPopup.module.css.map */

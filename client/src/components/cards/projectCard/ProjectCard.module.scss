@@ -1,0 +1,126 @@
+$clip_patch: polygon(89% 0, 100% 10%, 100% 100%, 9% 100%, 0 90%, 0 42%, 3% 35%, 3% 0);
+$card_width: 452px;
+$card_heigth: 321px;
+$member_clip_patch: polygon(100% 0, 100% 85%, 89% 100%, 0 100%, 0 0);
+
+.card_border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $card_width;
+    height: $card_heigth;
+    background-color:#F8EF00;
+    margin: 300px auto;
+    clip-path: $clip_patch;
+}
+
+.card_space_btwn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc($card_width - 3px);
+    height: calc($card_heigth - 3px);
+    background-color: var(--main-backround);
+    clip-path: $clip_patch;
+}
+
+.card {
+    width: calc($card_width - 22px);
+    height: calc($card_heigth - 21px);
+    background-color: var(--project-card-background);
+    clip-path: $clip_patch;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    max-height: 150px;
+    height: 100%;
+    margin: 12px 34px 0;
+    gap: 15px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card_sep {
+    height: 5px;
+    width: 100%;
+    background-color: var(--main-yellow);
+}
+
+.card_members_list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.card_members_item_border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82px;
+    width: 82px;
+    background-color: #FF0000;
+    clip-path: $member_clip_patch;
+}
+
+.card_members_item {
+    height: 80px;
+    width: 81px;
+    background-color: var(--main-backround);
+    clip-path: $member_clip_patch;
+    hr {
+        width: 100%;
+        height: 1px;
+        background-color: #FF0000;
+    }
+}
+
+.card_members_item_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+
+.card_members_item_text {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.card_members_item_status_checked {
+    width: 12px;
+    height: 22px;
+    margin-top: -6px;
+    border-bottom: 1px solid #00FF19;
+    border-right: 1px solid #00FF19;
+    transform: rotate(45deg);
+}
+
+.card_members_item_status_plus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 23px;
+        height: 1px;
+        background-color: #00F0FF;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 23px;
+        height: 1px;
+        background-color: #00F0FF;
+        transform: rotate(90deg);
+    }
+}
