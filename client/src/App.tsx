@@ -4,6 +4,7 @@ import AuthorizationPopup from './components/popups/authorizationPopus/Authoriza
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import UserCart from './components/userCart/UserCart';
 const App = () => {
   return (
@@ -45,6 +46,18 @@ const App = () => {
       <UserCard/>
       <button onClick={onClickAuth}>421412421</button>
 >>>>>>> c939c70 (update-auth-popup)
+=======
+import UserCard from './components/ui/userCard/UserCard';
+import ProjectCard from './components/ui/projectCard/ProjectCard';
+import Header from './components/semantic/header/Header';
+const App = () => {
+  return (
+    <>
+      <Header/>
+      <ProjectCard/>
+      <UserCard/>
+      {/* <AuthorizationPopup/> */}
+>>>>>>> c811b5c (header)
       <AppRouter />
     </>
   );
