@@ -1,25 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
-
+import {createSlice} from '@reduxjs/toolkit';
 
 export interface CounterState {
-  openAuth: boolean;
+    openAuth: boolean;
 }
 
 const initialState: CounterState = {
-  openAuth: false,
+    openAuth: false,
 }
 
-
 const authSlice = createSlice({
-  name: 'auth',
-  initialState,
-  reducers: {
-    setUserData: (state, action) => {
-      state.openAuth = action.payload;
+    name: 'auth',
+    initialState,
+    reducers: {
+        setUserData: (state, {payload}) => {
+            state.openAuth = payload;
+        },
     },
-  },
 });
 
 
 export default authSlice.reducer;
-export const { setUserData } = authSlice.actions;
+export const {setUserData} = authSlice.actions;

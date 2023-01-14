@@ -1,337 +1,113 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-$clip_patch: polygon(51% 0, 60% 5%, 91% 5%, 100% 14%, 100% 100%, 14% 100%, 0 86%, 0 0);
-$card_width: 352px;
-$card_heigth: 335px;
-
-.userCardBorder {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $card_width;
-    height: $card_height;
-    background-color: #00F0FF;
-    clip-path: $clip_patch;
-}
-
-.userCard {
-    position: relative;
-    width: calc($card_width - 4px);
-    height: calc($card_height - 5px);
-    border: 1px solid #00F0FF;
-    background-color: #22232D;
-    clip-path: $clip_patch;
-}
-
-.userCardInfoTop {
-    display: flex;
-    padding: 32px 22px 0 22px;
-}
-
-.userCardInfoTopImg {
-    width: 110px;
-    height: 123px;
-    border: 0.5px solid #00F0FF;
-    margin-right: auto;
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-.userCardInfoTopText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px 12px;
-    margin: 1px;
-    clip-path: polygon(86% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
-    width: 165px;
-    height: 120px;
-    background: #1D1E27;
-    p {
-        font-weight: 500;
-        font-size: 14px;
-    }
-}
-
-.userCardInfoTopTextBorder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: polygon(86% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
-    background:#00F0FF;
-    width: 168px;
-    height: 123px;
-}
-
-.userCardInfoTopTextName {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.userCardInfoTopTextReputation {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    color: #00FF38;
-}
-
-.userCardInfoContacts {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: auto;
-}
-
-.userCardInfoContactsItem {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.userCardSep {
-    height: 4px;
-    width: 100%;
-    background-color: #00F0FF;
-    margin: 30px 0;
-}
-
-.userCardInfoBottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: 500;
-    font-size: 18px;
-    margin: 0 22px;
-    max-height: 74px;
-    height: 100%;
-=======
 $clip_patch: polygon(51% 0, 60% 5%, 91% 5%, 100% 14%, 100% 100%, 14% 100%, 0 86%, 0 0);
 $card_width: 352px;
 $card_height: 335px;
 
 .userCardBorder {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $card_width;
-    height: $card_height;
-    background-color: #00F0FF;
-    clip-path: $clip_patch;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $card_width;
+  height: $card_height;
+  background-color: #00F0FF;
+  clip-path: $clip_patch;
 }
 
 .userCard {
-    position: relative;
-    width: calc($card_width - 4px);
-    height: calc($card_height - 5px);
-    border: 1px solid #00F0FF;
-    background-color: #22232D;
-    clip-path: $clip_patch;
+  position: relative;
+  width: calc($card_width - 4px);
+  height: calc($card_height - 5px);
+  border: 1px solid #00F0FF;
+  background-color: #22232D;
+  clip-path: $clip_patch;
 }
 
 .userCardInfoTop {
-    display: flex;
-    padding: 32px 22px 0 22px;
+  display: flex;
+  padding: 32px 22px 0 22px;
 }
 
 .userCardInfoTopImg {
-    width: 110px;
-    height: 123px;
-    border: 0.5px solid #00F0FF;
-    margin-right: auto;
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+  width: 110px;
+  height: 123px;
+  border: 0.5px solid #00F0FF;
+  margin-right: auto;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .userCardInfoTopText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px 12px;
-    margin: 1px;
-    clip-path: polygon(91% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
-    width: 165px;
-    height: 120px;
-    background: #1D1E27;
-    p {
-        font-weight: 500;
-        font-size: 14px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 12px;
+  margin: 1px;
+  clip-path: polygon(91% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
+  width: 165px;
+  height: 120px;
+  background: #1D1E27;
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+  }
 }
 
 .userCardInfoTopTextBorder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: polygon(91% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
-    background:#00F0FF;
-    width: 168px;
-    height: 123px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(91% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
+  background: #00F0FF;
+  width: 168px;
+  height: 123px;
 }
 
 .userCardInfoTopTextName {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .userCardInfoTopTextReputation {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    color: #00FF38;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: #00FF38;
 }
 
 .userCardInfoContacts {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: auto;
 }
 
 .userCardInfoContactsItem {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .userCardSep {
-    height: 4px;
-    width: 100%;
-    background-color: #00F0FF;
-    margin: 30px 0;
+  height: 4px;
+  width: 100%;
+  background-color: #00F0FF;
+  margin: 30px 0;
 }
 
 .userCardInfoBottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: 500;
-    font-size: 18px;
-    margin: 0 22px;
-    max-height: 74px;
-    height: 100%;
->>>>>>> 3dd5ba9 (full-register)
-=======
-$clip_patch: polygon(51% 0, 60% 5%, 91% 5%, 100% 14%, 100% 100%, 14% 100%, 0 86%, 0 0);
-$card_width: 352px;
-$card_height: 335px;
-
-.userCardBorder {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $card_width;
-    height: $card_height;
-    background-color: #00F0FF;
-    clip-path: $clip_patch;
-}
-
-.userCard {
-    position: relative;
-    width: calc($card_width - 4px);
-    height: calc($card_height - 5px);
-    border: 1px solid #00F0FF;
-    background-color: #22232D;
-    clip-path: $clip_patch;
-}
-
-.userCardInfoTop {
-    display: flex;
-    padding: 32px 22px 0 22px;
-}
-
-.userCardInfoTopImg {
-    width: 110px;
-    height: 123px;
-    border: 0.5px solid #00F0FF;
-    margin-right: auto;
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-.userCardInfoTopText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px 12px;
-    margin: 1px;
-    clip-path: polygon(86% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
-    width: 165px;
-    height: 120px;
-    background: #1D1E27;
-    p {
-        font-weight: 500;
-        font-size: 14px;
-    }
-}
-
-.userCardInfoTopTextBorder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: polygon(86% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
-    background:#00F0FF;
-    width: 168px;
-    height: 123px;
-}
-
-.userCardInfoTopTextName {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.userCardInfoTopTextReputation {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    color: #00FF38;
-}
-
-.userCardInfoContacts {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: auto;
-}
-
-.userCardInfoContactsItem {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.userCardSep {
-    height: 4px;
-    width: 100%;
-    background-color: #00F0FF;
-    margin: 30px 0;
-}
-
-.userCardInfoBottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: 500;
-    font-size: 18px;
-    margin: 0 22px;
-    max-height: 74px;
-    height: 100%;
->>>>>>> c811b5c (header)
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 22px;
+  max-height: 74px;
+  height: 100%;
 }

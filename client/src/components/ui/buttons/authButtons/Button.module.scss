@@ -1,6 +1,6 @@
 $clip_patch: polygon(95% 0, 100% 40%, 100% 100%, 5% 100%, 0 70%, 0 0);
 $width: 230px;
-$heigth: 33px;
+$height: 33px;
 .buttonBorder {
   position: absolute;
   display: flex;
@@ -9,16 +9,16 @@ $heigth: 33px;
   bottom: 25px;
   right: 25px;
   max-width: $width;
-  height: $heigth;
+  height: $height;
   width: 100%;
   clip-path: $clip_patch;
   background-color: #42f4ff;
-} 
+}
 
 .button {
   clip-path: $clip_patch;
   max-width: calc($width - 3px);
-  height: calc($heigth - 3px);
+  height: calc($height - 3px);
   width: 100%;
   padding: 7px 15px;
   color: var(--auth-input-placeholder);

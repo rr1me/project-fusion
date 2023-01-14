@@ -1,12 +1,13 @@
-import React, { FC } from 'react';
-import { useFormContext } from 'react-hook-form';
+import React, {FC} from 'react';
+import {useFormContext} from 'react-hook-form';
 import s from './AuthInput.module.scss';
+import {FieldErrors} from "react-hook-form/dist/types/errors";
 
 interface props {
   placeholder: string;
   type: 'text' | 'email' | 'password';
   name: string;
-  errors: any
+  errors: FieldErrors
 }
 
 const AuthInput: FC<props> = ({ placeholder, type, name, errors }) => {

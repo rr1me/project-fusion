@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import AuthInput from '../../ui/inputs/authInput/AuthInput';
+import {FieldErrors} from "react-hook-form/dist/types/errors";
 
 interface props {
-  errors: any;
+  errors: FieldErrors;
 }
 
 const LoginForm: FC<props> = ({ errors }) => {

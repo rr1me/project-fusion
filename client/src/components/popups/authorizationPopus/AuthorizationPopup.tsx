@@ -1,37 +1,41 @@
-import React, { FC, useState } from 'react';
+import React, {FC, useState} from 'react';
 import s from './AuthorizationPopup.module.scss';
 import CloseIcon from '../../ui/icons/CloseIcon';
-import { useForm, FormProvider } from 'react-hook-form';
+import {FieldValues, FormProvider, useForm} from 'react-hook-form';
 import Button from '../../ui/buttons/authButtons/Button';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../redux/store';
-import { setUserData } from '../../../redux/slices/authSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../../redux/store';
+import {setUserData} from '../../../redux/slices/authSlice';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { loginValidate, registerValidate } from '../../../utils/validate/authValidate';
-
+import {yupResolver} from '@hookform/resolvers/yup';
+import {loginValidate, registerValidate} from '../../../utils/validate/authValidate';
 
 const AuthorizationPopup: FC = () => {
   const isPopupOpen = useSelector((state: RootState) => state.authSlice.openAuth);
   const [isTypeAuth, setIsTypeAuth] = useState(true);
+
   const methods = useForm({
     resolver: yupResolver(isTypeAuth ? registerValidate : loginValidate),
   });
+
   const dispatch = useDispatch();
+
   const onClose = () => dispatch(setUserData(false));
+
   const onChangeType = () => {
     setIsTypeAuth(!isTypeAuth);
     methods.clearErrors();
   };
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
+
+  const onSubmit = (data: FieldValues) => console.log(data);
+
+  const stopProp =  (e:React.MouseEvent<HTMLElement>) => e.stopPropagation();
 
   const errors = methods.formState.errors;
   return (
     <div className={`${s.authMainPopup} ${isPopupOpen && s.active}`} onMouseDown={onClose}>
-      <div className={`${s.authWrapper}`} onMouseDown={(e) => e.stopPropagation()}>
+      <div className={`${s.authWrapper}`} onMouseDown={stopProp}>
         <span className={s.decore} />
         <FormProvider {...methods} >
           <form onSubmit={methods.handleSubmit(onSubmit)}>
