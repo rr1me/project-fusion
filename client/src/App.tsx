@@ -19,6 +19,9 @@ import ProjectCard from './components/ui/projectCard/ProjectCard';
 =======
 import { useDispatch } from 'react-redux';
 import { setUserData } from './redux/slices/authSlice';
+import UserCard from './components/ui/userCard/UserCard';
+
+
 
 >>>>>>> c939c70 (update-auth-popup)
 const App = () => {
@@ -39,6 +42,7 @@ const App = () => {
 >>>>>>> fe970c4 (log btn fix)
 =======
       <AuthorizationPopup />
+      <UserCard/>
       <button onClick={onClickAuth}>421412421</button>
 >>>>>>> c939c70 (update-auth-popup)
       <AppRouter />

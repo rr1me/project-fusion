@@ -8,23 +8,27 @@ import { RootState } from '../../../redux/store';
 import { setUserData } from '../../../redux/slices/authSlice';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { loginValidate, registerValidate } from '../../../utils/validate/authValidate';
 
 
 const AuthorizationPopup: FC = () => {
   const isPopupOpen = useSelector((state: RootState) => state.authSlice.openAuth);
   const [isTypeAuth, setIsTypeAuth] = useState(true);
+  const methods = useForm({
+    resolver: yupResolver(isTypeAuth ? registerValidate : loginValidate),
+  });
   const dispatch = useDispatch();
-  const onClose = () => {
-    dispatch(setUserData(false));
-  };
+  const onClose = () => dispatch(setUserData(false));
   const onChangeType = () => {
     setIsTypeAuth(!isTypeAuth);
+    methods.clearErrors();
   };
-  const methods = useForm();
   const onSubmit = (data: any) => {
     console.log(data);
   };
 
+  const errors = methods.formState.errors;
   return (
     <div className={`${s.authMainPopup} ${isPopupOpen && s.active}`} onMouseDown={onClose}>
       <div className={`${s.authWrapper}`} onMouseDown={(e) => e.stopPropagation()}>
@@ -35,12 +39,16 @@ const AuthorizationPopup: FC = () => {
               <CloseIcon />
             </button>
             <div className={s.inputsWrapper}>
-              {isTypeAuth ? <RegisterForm /> : <LoginForm />}
+              {isTypeAuth ? <RegisterForm errors={errors} /> : <LoginForm errors={errors} />}
             </div>
             <div className={s.changeType}>
-              <button type={'reset'} onClick={onChangeType}>{isTypeAuth ? 'I have account' : 'I don\'t have account'}</button>
+              <button
+                type={'reset'}
+                onClick={onChangeType}>
+                {isTypeAuth ? 'I have account' : 'I don\'t have account'}
+              </button>
             </div>
-            <Button type={'reset'}>{isTypeAuth ? 'Register' : 'Login'}</Button>
+            <Button type={'submit'}>{isTypeAuth ? 'Register' : 'Login'}</Button>
           </form>
         </FormProvider>
       </div>
