@@ -1,0 +1,104 @@
+.wrapper {
+    padding: 30px 0 0 30px;
+    height: 853px;
+    width: 362px;
+    background-color: var(--main-ligher);
+}
+
+.profile_photo {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 0.5px solid #00F0FF;
+    margin-bottom: 12px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.user_status {
+    position: absolute;
+    right: -10px;
+    bottom: -6px;
+    width: 21px;
+    height: 15px;
+    border-radius: 14px;
+    background-color: var(--main-ligher);
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+}
+
+.user_status_dot {
+    position: absolute;
+    right: -20px;
+    bottom: 12px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #00FF38;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reputation {
+    color: var(--sweet-green);
+}
+
+.profile_info_item {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    font-size: 16px;
+}
+
+.profile_info_sep {
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: var(--main-separator);
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    &::after {
+        display: block;
+        margin-left: 15px;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--main-separator);
+    }
+}
+
+.profile_contact_item {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    button {
+        color: #ffffff;
+        background-color: var(--main-darker);
+        font-weight: 500;
+        font-size: 14px;
+        height: 31px;
+        border: 1px solid var(--main-blue);
+    }
+}
+
+.btn_send_message {
+    width: 131px;
+}
+
+.btn_invite {
+    width: 155px;
+}

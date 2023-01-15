@@ -6,6 +6,7 @@ import { setUserData } from './redux/slices/authSlice';
 import UserCard from './components/ui/userCard/UserCard';
 import Header from './components/semantic/header/Header';
 import ProjectCard from './components/ui/projectCard/ProjectCard';
+import ProfileInfo from './components/ui/profileInfo/ProfileInfo';
 
 
 
@@ -17,9 +18,10 @@ const App = () => {
   return (
     <>
       <Header/>
-      <AuthorizationPopup />
-      <UserCard/>
-      <ProjectCard/>
+      {/* <AuthorizationPopup /> */}
+       <ProfileInfo/>
+      {/* <UserCard/>
+      <ProjectCard/> */}
       <button onClick={onClickAuth}>421412421</button>
       <AppRouter />
     </>
